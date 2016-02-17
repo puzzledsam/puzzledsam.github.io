@@ -19,8 +19,8 @@ function loadOptions() {
   var $idleAlertToggle = $('#idleAlertToggle');
 
   if (localStorage.stepGoal) {
-    $stepGoal[0].value = localStorage.stepGoal;
-    $idleAlert[0].checked = localStorage.idleAlert === 'true';
+    $stepGoalAmount[0].value = localStorage.stepGoal;
+    $idleAlertToggle[0].checked = localStorage.idleAlert === 'true';
   }
 }
 

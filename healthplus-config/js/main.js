@@ -15,26 +15,26 @@ function submitHandler() {
 }
 
 function loadOptions() {
-  var $backgroundColorPicker = $('#backgroundColorPicker');
-  var $timeFormatCheckbox = $('#timeFormatCheckbox');
+  var $stepGoal = $('#stepGoal');
+  var $idleAlert = $('#idleAlert');
 
-  if (localStorage.backgroundColor) {
-    $backgroundColorPicker[0].value = localStorage.backgroundColor;
-    $timeFormatCheckbox[0].checked = localStorage.twentyFourHourFormat === 'true';
+  if (localStorage.stepGoal) {
+    $stepGoal[0].value = localStorage.stepGoal;
+    $idleAlert[0].checked = localStorage.idleAlert === 'true';
   }
 }
 
 function getAndStoreConfigData() {
-  var $backgroundColorPicker = $('#backgroundColorPicker');
-  var $timeFormatCheckbox = $('#timeFormatCheckbox');
+  var $stepGoal = $('#stepGoal');
+  var $idleAlert = $('#idleAlert');
 
   var options = {
-    backgroundColor: $backgroundColorPicker.val(),
-    twentyFourHourFormat: $timeFormatCheckbox[0].checked
+    stepGoalAmount: $stepGoal.val(),
+    idleAlertToggle: $idleAlert[0].checked
   };
 
-  localStorage.backgroundColor = options.backgroundColor;
-  localStorage.twentyFourHourFormat = options.twentyFourHourFormat;
+  localStorage.stepGoalAmount = options.stepGoalAmount;
+  localStorage.idleAlertToggle = options.idleAlertToggle;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;

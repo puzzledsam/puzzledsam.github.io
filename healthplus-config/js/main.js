@@ -15,8 +15,8 @@ function submitHandler() {
 }
 
 function loadOptions() {
-  var $stepGoal = $('#stepGoal');
-  var $idleAlert = $('#idleAlert');
+  var $stepGoalAmount = $('#stepGoalAmount');
+  var $idleAlertToggle = $('#idleAlertToggle');
 
   if (localStorage.stepGoal) {
     $stepGoal[0].value = localStorage.stepGoal;
@@ -25,12 +25,12 @@ function loadOptions() {
 }
 
 function getAndStoreConfigData() {
-  var $stepGoal = $('#stepGoal');
-  var $idleAlert = $('#idleAlert');
+  var $stepGoalAmount = $('#stepGoalAmount');
+  var $idleAlertToggle = $('#idleAlertToggle');
 
   var options = {
-    stepGoal: $stepGoal.val(),
-    idleAlert: $idleAlert[0].checked
+    stepGoal: $stepGoalAmount.val(),
+    idleAlert: $idleAlertToggle[0].checked
   };
 
   localStorage.stepGoal = options.stepGoal;

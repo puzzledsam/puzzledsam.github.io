@@ -15,22 +15,22 @@ function submitHandler() {
 }
 
 function loadOptions() {
-  var $stepGoalAmount = $('#stepGoalAmount');
-  var $idleAlertToggle = $('#idleAlertToggle');
+  var $stepGoal = $('#stepGoal');
+  var $idleAlert = $('#idleAlert');
 
   if (localStorage.stepGoal) {
-    $stepGoalAmount[0].value = localStorage.stepGoal;
-    $idleAlertToggle[0].checked = localStorage.idleAlert === 'true';
+    $stepGoal[0].value = localStorage.stepGoal;
+    $idleAlert[0].checked = localStorage.idleAlert === 'true';
   }
 }
 
 function getAndStoreConfigData() {
-  var $stepGoalAmount = $('#stepGoalAmount');
-  var $idleAlertToggle = $('#idleAlertToggle');
+  var $stepGoal = $('#stepGoal');
+  var $idleAlert = $('#idleAlert');
 
   var options = {
-    stepGoal: $stepGoalAmount.val(),
-    idleAlert: $idleAlertToggle[0].checked
+    stepGoal: $stepGoal.val(),
+    idleAlert: $idleAlert[0].checked
   };
 
   localStorage.stepGoal = options.stepGoal;

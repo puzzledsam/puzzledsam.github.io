@@ -19,8 +19,8 @@ function loadOptions() {
   var $idleAlert = $('#idleAlert');
 
   if (localStorage.stepGoal) {
-    $stepGoal[0].value = localStorage.stepGoalAmount;
-    $idleAlert[0].checked = localStorage.idleAlertToggle === 'true';
+    $stepGoal[0].value = localStorage.stepGoal;
+    $idleAlert[0].checked = localStorage.idleAlert === 'true';
   }
 }
 
@@ -29,12 +29,12 @@ function getAndStoreConfigData() {
   var $idleAlert = $('#idleAlert');
 
   var options = {
-    stepGoalAmount: $stepGoal.val(),
-    idleAlertToggle: $idleAlert[0].checked
+    stepGoal: $stepGoal.val(),
+    idleAlert: $idleAlert[0].checked
   };
 
-  localStorage.stepGoalAmount = options.stepGoalAmount;
-  localStorage.idleAlertToggle = options.idleAlertToggle;
+  localStorage.stepGoal = options.stepGoal;
+  localStorage.idleAlert = options.idleAlert;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;

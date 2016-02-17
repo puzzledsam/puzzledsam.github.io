@@ -20,7 +20,7 @@ function loadOptions() {
 
   if (localStorage.stepGoal) {
     $stepGoal[0].value = localStorage.stepGoal;
-    $idleAlert[0].checked = localStorage.idleAlert === 'true';
+    $idleAlert[0].checked = localStorage.idleAlert === 'false';
   }
 }
 

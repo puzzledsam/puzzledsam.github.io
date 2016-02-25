@@ -14,12 +14,12 @@
   <div class='item-container'>
     <div class='item-container-header'>Customizability</div>
     <div class='item-container-content'>
-      <label class='item'>
-        Step Goal
-        <div class='item-input-wrapper'>
-        <input id='stepGoal' type='text' onkeypress='return event.charCode >= 48 && event.charCode <= 57' class='item-input' placeholder='Amount of steps' value='10000'>
+      <label class="item">
+      <input type="range" id='stepGoal' class="item-slider" name="slider-goal" value="10000">
+      <div class="item-input-wrapper item-slider-text">
+        <input type="text" id='stepGoal' class="item-input" name="slider-goal" value="10000">
       </div>
-      </label>
+    </label>
       <label class='item'>
         Idle Alert
         <input id='idleAlert' type='checkbox' class='item-checkbox'>

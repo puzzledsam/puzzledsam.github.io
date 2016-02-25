@@ -1,45 +1,61 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel='stylesheet' type='text/css' href='/healthplus-config/css/slate.min.css'>
-  <link rel='stylesheet' type='text/css' href='/healthplus-config/css/style.css'>
+    <meta charset="UTF-8">
+
+    <title>
+    </title>
+    <link href='/healthplus-config/css/slate.min.css' rel='stylesheet' type=
+    'text/css'>
+    <link href='/healthplus-config/css/style.css' rel='stylesheet' type=
+    'text/css'>
 </head>
+
 <body>
-  <div class='item-container'>
-    <h1 class='title'>Health+<br>Configuration</h1>
-  </div>
-
-  <div class='item-container'>
-    <div class='item-container-header'>Customizability</div>
-    <div class='item-container-content'>
-      <label class="item">
-        Step Goal
-        <div>
-      <input type="range" id='stepGoal' class="item-slider" name="slider-goal" min="1000" max="25000" value="10000" step="1000">
-      <div class="item-input-wrapper item-slider-text">
-        <input type="text" id='stepGoal' class="item-input" name="slider-goal" value="10000">
-      </div>
-      </div>
-    </label>
-      <label class='item'>
-        Idle Alert
-        <input id='idleAlert' type='checkbox' class='item-checkbox'>
-      </label>
+    <div class='item-container'>
+        <h1 class='title'>Health+<br>
+        Configuration</h1>
     </div>
-    <div class='item-container-footer'>
-      Idle Alert reminds you to move when you are inactive for a long period of time.
-    </div>
-  </div>
 
-  <div class='item-container'>
-    <div class='button-container'>
-      <input id='submitButton' type='button' class='item-button' value='Update'>
-    </div>
-  </div>
 
-  <script src='/healthplus-config/js/slate.min.js'></script>
-  <script src='/healthplus-config/js/main.js'></script>
+    <div class='item-container'>
+        <div class='item-container-header'>
+            Customizability
+        </div>
+
+
+        <div class='item-container-content'>
+            <label class="item">Step Goal <input class="item-slider" id=
+            'stepGoal' max="25000" min="1000" name="slider-goal" step="1000"
+            type="range" value="10000"></label>
+
+            <div class="item-input-wrapper item-slider-text">
+                <label class="item"><input class="item-input" id='stepGoal'
+                name="slider-goal" type="text" value="10000"></label>
+            </div>
+            <label class="item"></label> <label class='item'>Idle Alert
+            <input class='item-checkbox' id='idleAlert' type=
+            'checkbox'></label>
+        </div>
+
+
+        <div class='item-container-footer'>
+            Idle Alert reminds you to move when you are inactive for a long
+            period of time.
+        </div>
+    </div>
+
+
+    <div class='item-container'>
+        <div class='button-container'>
+            <input class='item-button' id='submitButton' type='button' value=
+            'Update'>
+        </div>
+    </div>
+    <script src='/healthplus-config/js/slate.min.js'>
+    </script> 
+    <script src='/healthplus-config/js/main.js'>
+    </script>
 </body>
 </html>

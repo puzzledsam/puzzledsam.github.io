@@ -17,24 +17,29 @@ function submitHandler() {
 function loadOptions() {
   var $stepGoal = $('#stepGoal');
   var $idleAlert = $('#idleAlert');
+  var $stepGoalSlider = $('#stepGoalSlider');
 
   if (localStorage.stepGoal) {
     $stepGoal[0].value = localStorage.stepGoal;
     $idleAlert[0].checked = localStorage.idleAlert === 'true';
+    $stepGoalSlider[0].value = localStorage.stepGoalSlider;
   }
 }
 
 function getAndStoreConfigData() {
   var $stepGoal = $('#stepGoal');
   var $idleAlert = $('#idleAlert');
+  var $stepGoalSlider = $('#stepGoalSlider');
 
   var options = {
     stepGoal: $stepGoal.val(),
-    idleAlert: $idleAlert[0].checked
+    idleAlert: $idleAlert[0].checked,
+    stepGoalSlider: $stepGoalSlider.val()
   };
 
   localStorage.stepGoal = options.stepGoal;
   localStorage.idleAlert = options.idleAlert;
+  localStorage.stepGoalSlider = options.stepGoalSlider;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;

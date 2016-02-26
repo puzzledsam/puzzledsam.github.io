@@ -18,11 +18,13 @@ function loadOptions() {
   var $stepGoal = $('#stepGoal');
   var $idleAlert = $('#idleAlert');
   var $stepGoalSlider = $('#stepGoalSlider');
+  var $stepGoalToggle = $('#stepGoalToggle');
 
   if (localStorage.stepGoal) {
     $stepGoal[0].value = localStorage.stepGoal;
     $idleAlert[0].checked = localStorage.idleAlert === 'true';
     $stepGoalSlider[0].value = localStorage.stepGoalSlider;
+    $stepGoalToggle[0].checked = localStorage.stepGoalToggle === 'true';
   }
 }
 
@@ -30,16 +32,19 @@ function getAndStoreConfigData() {
   var $stepGoal = $('#stepGoal');
   var $idleAlert = $('#idleAlert');
   var $stepGoalSlider = $('#stepGoalSlider');
+  var $stepGoalToggle = $('#stepGoalToggle');
 
   var options = {
     stepGoal: $stepGoal.val(),
     idleAlert: $idleAlert[0].checked,
-    stepGoalSlider: $stepGoalSlider.val()
+    stepGoalSlider: $stepGoalSlider.val(),
+    stepGoalToggle: $stepGoalToggle[0].checked
   };
 
   localStorage.stepGoal = options.stepGoal;
   localStorage.idleAlert = options.idleAlert;
   localStorage.stepGoalSlider = options.stepGoalSlider;
+  localStorage.stepGoalToggle = options.stepGoalToggle;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;

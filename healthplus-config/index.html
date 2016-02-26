@@ -19,67 +19,41 @@
         Configuration</h1>
     </div>
 
-
-        <div class="item-container">
-            <div class="item-container-header">
-                Step Goal
-            </div>
-
-
-            <div class="item-container-content">
-                <label class="item">Goal <input class="item-slider" id=
-                'stepGoalSlider' name="slider-stepGoal" type="range" value=
-                "10000" max="25000" min="0" step="1000"></label>
-
-                <div class="item-input-wrapper item-slider-text">
-                    <label class="item"><input class="item-input" id='stepGoal'
-                    name="slider-stepGoal" type="text" value="50"></label>
-                </div>
-            </div>
-            
-            <div class="item-container-footer">
-            You can also set a custom amount using the input box to the right of the slider.
-        </div>
-        </div>
-
-
 <div class="item-container">
-  <div class="item-container-header">Slider</div>
+  <div class="item-container-header">Step Goal</div>
   <div class="item-container-content">
     <label class="item">
-      <input type="range" class="item-slider" name="slider-1" value="50">
+      <input type="range" class="item-slider" name="slider-stepGoal" id="stepGoalSlider" value="10000" max="25000" min="0" step="1000>
       <div class="item-input-wrapper item-slider-text">
-        <input type="text" class="item-input" name="slider-1" value="50">
+        <input type="text" class="item-input" name="slider-stepGoal" id="stepGoal" value="10000">
       </div>
     </label>
   </div>
+  <div class="item-container-footer">
+            You can also set a custom amount using the input box to the right of the slider.
+        </div>
 </div>
 
         <div class="item-container">
             <div class="item-container-header">
                 Idle Alert
             </div>
-
-
             <div class="item-container-content">
                 <label class="item">Enabled <input checked class="item-toggle"
                 id='idleAlert' name="toggle-idleAlert" type="checkbox"></label>
             </div>
-
-
             <div class="item-container-footer">
                 Idle Alert reminds you to move when you are inactive for a long
                 period of time.
             </div>
         </div>
-
-
         <div class='item-container'>
             <div class='button-container'>
                 <input class='item-button' id='submitButton' type='button'
                 value='Update'>
             </div>
         </div>
+        
         <script src='/healthplus-config/js/slate.min.js'>
         </script> 
         <script src='/healthplus-config/js/main.js'>
